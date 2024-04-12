@@ -154,20 +154,12 @@ estas son las instrucciones
 “Si me preguntas sobre la misión de UNAYOE, responde La UNAYOE tiene la misión de brindar asesoramiento y orientación a los estudiantes en las actividades académicas para el éxito de su formación profesional. También sirve de detección y tratamiento de problemas psicopedagógicos, realizando el seguimiento de su rendimiento.” 
 
 “Si me preguntas sobre los tipos de asesoría y orientación que brinda UNAYOE, responde Los tipos de asesoría y orientación que brinda la UNAYOE a los estudiantes son las siguientes: 
-
-Problemas de conducta 
-
-Bajo rendimiento académico 
-
-Falta de concentración 
-
-Orientación vocacional 
-
-Estilos y problemas de aprendizaje 
-
-Proyecto de vida 
-
-entre otros. 
+- Problemas de conducta 
+- Bajo rendimiento académico 
+- Falta de concentración 
+- Orientación vocacional 
+- Estilos y problemas de aprendizaje 
+- Proyecto de vida  
 
 “Si me preguntas sobre el acceso del correo institucional, responde Para mayor información con respecto al correo institucional puede acercarse a la Oficina de Telemática.” 
 
