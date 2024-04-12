@@ -30,9 +30,13 @@ def index():
 def ask():
     try:
         user_input = request.form["user_input"]
+        print(f"User: {user_input}")
         response = chat.send_message(instruction + user_input)
+        print(f"Bot: {response.text}")
         return jsonify({"response": response.text})
+
     except Exception as e:
+        print(f"Bot: {e}")
         return jsonify(
             {"response": "¿Podrias volver a formular tu pregunta?, no entendí bien"}
         )
@@ -49,5 +53,5 @@ if __name__ == "__main__":
     # app.run(host='0.0.0.0'debug=True)
     ip_address = socket.gethostbyname(socket.gethostname())
     _port = 80
-    app.run(debug=False, host='0.0.0.0', port=_port)
+    app.run(debug=False, host="0.0.0.0", port=_port)
     print(f"Servidor flask corriendo en http://{ip_address}:{_port}")

@@ -54,7 +54,8 @@
             $('#messageArea').submit(function (event) {
                 event.preventDefault();
                 var user_input = $('#user_input').val();
-                $('#messageFormeight').append('<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + user_input + '</div></div>');
+                var formatted_input = user_input.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>'); // Buscar y envolver texto entre dobles asteriscos en negrita
+                $('#messageFormeight').append('<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + formatted_input + '</div></div>');
                 $('#user_input').val('');
                 $.ajax({
                     url: '/ask',
@@ -62,6 +63,8 @@
                     data: { user_input: user_input },
                     success: function (response) {
                         var bot_response = response.response;
+                        // Eliminar los asteriscos alrededor de las palabras encerradas entre ellos
+                        bot_response = bot_response.replace(/\*\*(.*?)\*\*/g, '$1');
                         $('#messageFormeight').append('<div class="d-flex justify-content-start mb-4"><div class="msg_cotainer">' + bot_response + '</div></div>');
                     }
                 });
@@ -69,4 +72,5 @@
         });
     </script>
 </body>
+
 </html>
