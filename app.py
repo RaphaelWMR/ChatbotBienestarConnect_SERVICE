@@ -33,7 +33,9 @@ def ask():
         response = chat.send_message(instruction + user_input)
         return jsonify({"response": response.text})
     except Exception as e:
-        return jsonify({"response": "¿Podrias volver a formular tu pregunta?, no entendí bien"})
+        return jsonify(
+            {"response": "¿Podrias volver a formular tu pregunta?, no entendí bien"}
+        )
 
 
 # Cargando el chatbot
@@ -46,5 +48,6 @@ instruction = read_instruction_from_file("knowledge.txt")
 if __name__ == "__main__":
     # app.run(host='0.0.0.0'debug=True)
     ip_address = socket.gethostbyname(socket.gethostname())
-    app.run(debug=False, host=ip_address)
-    print(f"Servidor flask corriendo en http://{ip_address}:80")
+    _port = 80
+    app.run(debug=False, host=ip_address, port=_port)
+    print(f"Servidor flask corriendo en http://{ip_address}:{_port}")
