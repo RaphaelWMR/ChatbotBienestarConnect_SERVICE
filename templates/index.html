@@ -10,54 +10,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <style>
-        html,
-        body,
-        .chat,
-        .card {
-            height: 100%;
-        }
 
-        .chat {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card {
-            max-width: 600px;
-            width: 100%;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .msg_head {
-            /* background: #f2f2f2;*/
-            padding: 15px 20px;
-            border-bottom: 1px solid #dee2e6;
-            /* Cambio el color del texto a negro */
-        }
-
-        .msg_card_body {
-            flex: 1;
-            overflow-y: auto;
-            padding: 15px;
-        }
-
-        .card-footer {
-            padding: 15px;
-        }
-
-        .send_btn {
-            color: #fff;
-            background: #007bff;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -67,7 +22,8 @@
             <div class="card-header msg_head">
                 <div class="d-flex bd-highlight">
                     <div class="img_cont">
-                        <img src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/224105991_5761239173947286_7946474080944639857_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHIgWJDcP9cWBbjji9ATROiCim_ZgpTzfQKKb9mClPN9GfmzLXSeItiwFvJ_jClwc8ITnWiPJ2-ZRO7q3rqjmN2&_nc_ohc=5Wr44c-tE0cAb4ONlOF&_nc_ht=scontent.flim33-1.fna&oh=00_AfDlHS5_Er_7IFdCkDpxPi9_YP8A03hMlyDpFhqJ9wPE8A&oe=661A919B"
+                        <!-- Logo -->
+                        <img src="{{ url_for('static', filename='favicon.ico') }}"
                             class="rounded-circle user_img">
                         <span class="online_icon"></span>
                     </div>
